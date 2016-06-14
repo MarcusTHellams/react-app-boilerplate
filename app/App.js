@@ -15,9 +15,9 @@ class GroceryList extends Component {
   render(){
     return (
       <ul>
-      <ListItem quantity="1" name="Bread" />
-      <ListItem quantity="6" name="Eggs" />
-      <ListItem quantity="2" name="Milk" />
+      <ListItem quantity="1"> Bread</ListItem>
+      <ListItem quantity="6"> Eggs</ListItem>
+      <ListItem quantity="2"> Milk</ListItem>
       </ul>
     );
   }
@@ -27,7 +27,7 @@ class ListItem extends Component {
   render(){
     return (
      <li>
-		{this.props.quantity} x {this.props.name}
+		{this.props.quantity} x {this.props.children}
      </li>
     );
   }
