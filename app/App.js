@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
 
-class App extends Component {
+class Hello extends Component {
   render(){
+  	var place = 'World';
     return (
-      <h1>Hello World</h1>
+      <h1>Hello {place}</h1>
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(<Hello />, document.getElementById('root'));
