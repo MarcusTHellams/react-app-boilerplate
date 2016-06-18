@@ -1,33 +1,42 @@
 import React from 'react';
+import {
+  render
+} from 'react-dom';
 import KanbanBoard from './KanbanBoard';
 
 let cardsList = [{
   id: 1,
-  title: "Read the Book",
-  description: "I should read the whole book",
-  status: "in-progress",
-  tasks: []
-}, {
-  id: 2,
-  title: "Write some code",
-  description: "Code along with the samples in the book",
+  title: "Card one title",
+  description: "Card detailed description.",
   status: "todo",
   tasks: [{
     id: 1,
-    name: "ContactList Example",
+    name: "Task one",
     done: true
   }, {
     id: 2,
-    name: "Kanban Example",
+    name: "Task two",
     done: false
   }, {
     id: 3,
-    name: "My own experiments",
+    name: "Task three",
     done: false
   }]
+}, {
+  id: 2,
+  title: "Card Two title",
+  description: "Card detailed description",
+  status: "in-progress",
+  tasks: []
+}, {
+  id: 3,
+  title: "Card Three title",
+  description: "Card detailed description",
+  status: "done",
+  tasks: []
 }, ];
 
 
 /* beautify ignore:start */
-React.render(<KanbanBoard cards={cardsList} />, document.getElementById('root')); 
+render(<KanbanBoard cards={cardsList} />, document.getElementById('root')); 
 /* beautify ignore:end */
